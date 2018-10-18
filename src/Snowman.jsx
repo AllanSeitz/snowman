@@ -6,7 +6,7 @@ import snowman_3 from './snowman/step_3.png'
 import snowman_4 from './snowman/step_4.png'
 import snowman_5 from './snowman/step_5.png'
 import snowman_6 from './snowman/step_6.png'
-import snowman_7 from './snowman/step_7.png'
+import snowman_7 from './snowman/step_7.gif'
 
 class Snowman extends Component {
 	constructor(props) {
