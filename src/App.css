@@ -26,7 +26,7 @@ img {
 	list-style: none;
 	justify-content: center;
 	padding: 0;
-	margin-bottom: 0;
+	margin: 0.5rem 0 0 0;
 }
 
 .letterButtons {
@@ -36,6 +36,7 @@ img {
 	justify-content: center;
 	padding: 0;
 	max-width: 322px;
+	margin: 0.5rem 0 0 0;
 }
 .randomWord li {
 	margin: 0 0.1rem;
@@ -73,6 +74,10 @@ button:disabled {
 	color: blue;
 	opacity: 0;
 }
+.new {
+	width: 8rem;
+	margin-top: 0.3rem;
+}
 @media (min-width: 500px) {
 	header {
 		font-size: 3.5rem;
@@ -89,5 +94,8 @@ button:disabled {
 		width: 3.5rem;
 		height: 3.5rem;
 		font-size: 2.5rem;
+	}
+	.new {
+		width: 9rem;
 	}
 }

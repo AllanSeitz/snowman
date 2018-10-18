@@ -27,6 +27,13 @@ class App extends Component {
 			lettersChosen: this.state.lettersChosen
 		})
 	}
+	newGame = () => {
+		this.setState({
+			lettersChosen: [],
+			secretWord: [],
+			randomWord: Words[Math.floor(Math.random() * Words.length)]
+		})
+	}
 
 	render() {
 		return (
@@ -41,6 +48,9 @@ class App extends Component {
 					letterChosen={this.letterChosen}
 					lettersChosen={this.state.lettersChosen}
 				/>
+				<button className="new" onClick={this.newGame}>
+					New Game
+				</button>
 			</main>
 		)
 	}

@@ -23,7 +23,9 @@ class Snowman extends Component {
 		]
 	}
 	render() {
-		return <img src={this.snowmen[this.props.correctGuessCount]} />
+		return (
+			<img src={this.snowmen[this.props.correctGuessCount]} alt="SnowMan" />
+		)
 	}
 }
 
