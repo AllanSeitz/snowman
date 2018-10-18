@@ -49,7 +49,7 @@ class App extends Component {
 					lettersChosen={this.state.lettersChosen}
 				/>
 				<button className="new" onClick={this.newGame}>
-					New Game
+					new game
 				</button>
 			</main>
 		)
