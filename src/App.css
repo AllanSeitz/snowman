@@ -1,24 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Snowburst+One');
+
+body {
+	background-image: linear-gradient(to top, lightblue, white);
+	height: 100vh;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Snowburst One', cursive;
+}
+header {
+	font-size: 2rem;
+	color: blue;
+	font-weight: bold;
+}
 img {
-  width: 300px;
+	width: 300px;
+	border-radius: 5px;
 }
 
 .randomWord {
-  font-size: 30px;
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
+	font-size: 30px;
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin-bottom: 0;
 }
 
 .letterButtons {
-  border: solid 1px black;
-  margin: 5px 350px 0 340px;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: space-evenly;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	max-width: 322px;
 }
-
+.randomWord li {
+	margin: 0 0.1rem;
+	background-image: linear-gradient(to top right, darkblue, blue);
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 1.5rem;
+	text-align: center;
+	border-radius: 50%;
+	color: white;
+	text-transform: uppercase;
+}
 .letterButtons li {
-  font-size: 20px;
-  margin-right: 10px;
+	font-size: 20px;
+	margin: 0.3rem 0.1rem;
+}
+button {
+	font-family: 'Snowburst One', cursive;
+	font-weight: bold;
+	border-radius: 15%;
+	color: white;
+	height: 2rem;
+	width: 2rem;
+	border-color: white black black white;
+	background-image: linear-gradient(to top right, darkblue, blue);
+	text-transform: uppercase;
+}
+button:hover {
+}
+button:active {
+	background-image: linear-gradient(to top right, blue, darkblue);
+	border-color: black white white black;
+}
+button:disabled {
+	color: blue;
+	opacity: 0;
+}
+@media (min-width: 500px) {
+	header {
+		font-size: 3.5rem;
+	}
+	button {
+		height: 3rem;
+		width: 3rem;
+		font-size: 1.3rem;
+	}
+	.letterButtons {
+		max-width: 500px;
+	}
+	.randomWord li {
+		width: 3.5rem;
+		height: 3.5rem;
+		font-size: 2.5rem;
+	}
 }

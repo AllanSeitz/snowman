@@ -6,43 +6,44 @@ import Snowman from './Snowman'
 import Alphabet from './Alphabet'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+	constructor(props) {
+		super(props)
 
-    this.state = {
-      correctGuessCount: 0,
-      lettersChosen: [],
-      randomWord: Words[Math.floor(Math.random() * Words.length)]
-    }
-  }
-  correctGuessCount = () => {
-    return this.state.randomWord.split('').filter((letter, index) => {
-      return this.state.lettersChosen.includes(letter)
-    }).length
-  }
+		this.state = {
+			correctGuessCount: 0,
+			lettersChosen: [],
+			randomWord: Words[Math.floor(Math.random() * Words.length)]
+		}
+	}
+	correctGuessCount = () => {
+		return this.state.randomWord.split('').filter((letter, index) => {
+			return this.state.lettersChosen.includes(letter)
+		}).length
+	}
 
-  letterChosen = letter => {
-    this.state.lettersChosen.push(letter)
-    this.setState({
-      lettersChosen: this.state.lettersChosen
-    })
-  }
+	letterChosen = letter => {
+		this.state.lettersChosen.push(letter)
+		this.setState({
+			lettersChosen: this.state.lettersChosen
+		})
+	}
 
-  render() {
-    return (
-      <div className="App">
-        <Snowman correctGuessCount={this.correctGuessCount()} />
-        <WordDisplay
-          randomWord={this.state.randomWord}
-          lettersChosen={this.state.lettersChosen}
-        />
-        <Alphabet
-          letterChosen={this.letterChosen}
-          lettersChosen={this.state.lettersChosen}
-        />
-      </div>
-    )
-  }
+	render() {
+		return (
+			<main>
+				<header>Snow Man</header>
+				<Snowman correctGuessCount={this.correctGuessCount()} />
+				<WordDisplay
+					randomWord={this.state.randomWord}
+					lettersChosen={this.state.lettersChosen}
+				/>
+				<Alphabet
+					letterChosen={this.letterChosen}
+					lettersChosen={this.state.lettersChosen}
+				/>
+			</main>
+		)
+	}
 }
 
 export default App
